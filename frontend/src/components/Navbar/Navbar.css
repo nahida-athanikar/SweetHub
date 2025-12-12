@@ -1,0 +1,148 @@
+.navbar {
+  width: 100%;
+  height: 70px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Left Section */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-logo {
+  width: 105px;
+  height: 85px;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 35px;
+}
+
+.nav-menu li {
+  font-size: 17px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.nav-menu li:hover {
+  color: #d12b65;
+}
+
+.active {
+  border-bottom: 3px solid #d12b65;
+  padding-bottom: 4px;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.nav-icon {
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  color: #444;
+  transition: 0.3s;
+}
+
+.nav-icon:hover {
+  color: #d12b65;
+}
+
+/* Sign In Button */
+.sign-in-btn {
+  background: #d12b65;
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.sign-in-btn:hover {
+  background: #b21d54;
+}
+
+/* Basket Wrapper */
+.basket-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Dot Badge */
+.dot {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 10px;
+  height: 10px;
+  background: #d12b65;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+/* Hide hamburger on Desktop */
+.mobile-menu-icon {
+  display: none;
+}
+
+/* ---------------------------
+   MOBILE view
+--------------------------- */
+@media (max-width: 768px) {
+  .nav-logo {
+    width: 90px;
+    height: 70px;
+  }
+
+  /* Hide desktop menu */
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background: #ffffff;
+    padding: 10px 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+  }
+
+  .nav-menu.open {
+    display: flex;
+  }
+
+  .nav-menu li {
+    padding: 5px 0;
+    text-align: center;
+  }
+
+  /* Hide Sign In button on mobile */
+  .sign-in-btn {
+    display: none;
+  }
+
+  /* show hamburger menu on mobile */
+  .mobile-menu-icon {
+    display: block;
+  }
+}
