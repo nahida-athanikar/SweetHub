@@ -3,7 +3,7 @@ import "./Navbar.css";
 import { Search, ShoppingBasket, Menu, X } from "lucide-react";
 
 const Navbar = () => {
-  const [sweet, setSweet] = useState("sweet");
+  const [sweet, setSweet] = useState("false");
   const [sweetCount, setSweetCount] = useState(1);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 

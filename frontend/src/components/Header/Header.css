@@ -1,0 +1,152 @@
+.header {
+  height: 34vw;
+  min-height: 320px;
+  width: 100%;
+  background: url('./public/assets/header.jpg') no-repeat center center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  margin-top: 20px;
+  border-radius: 20px;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45); /* adjust 0.35–0.55 */
+  z-index: 1;
+}
+
+
+.header-contents {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items:  flex-start;
+  gap: 1.5vw;
+  max-width: 50%;
+  bottom: 10%;
+  left: 6vw;  
+  animation: fadeIn 3s;
+}
+
+.header-contents h2 {
+  font-weight: 600;
+  font-size: max(4.5vw, 22px);
+  color: #ff4f8b;
+  text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.header-contents p {
+  font-weight: 400;
+  font-size: max(1.1vw, 14px);
+  color: #f5f5f5;
+  line-height: 1.6;
+}
+
+.header-contents button {
+  border: none;
+  color:  white;
+  font-weight: 500;
+  padding: 1vw 2.3vw;
+  background-color:  #b21d54;
+  font-size: max(1vw, 13px);
+  border-radius: 50px;
+}
+
+/* ---------------------------
+   MEDIUM SCREEN (TABLET)
+--------------------------- */
+@media (max-width: 1199px) {
+  .header {
+    height: 45vw;
+    min-height: 360px;
+  }
+
+  .header-contents {
+    max-width: 65%;
+    left: 5vw;
+    bottom: 12%;
+    gap: 12px;
+  }
+
+  .header-contents h2 {
+    font-size: 32px;
+  }
+
+  .header-contents p {
+    font-size: 15px;
+  }
+
+  .header-contents button {
+    padding: 10px 22px;
+    font-size: 14px;
+  }
+}
+
+/* ---------------------------
+   MEDIUM SCREEN (TABLET)
+--------------------------- */
+@media (max-width: 1199px) {
+  .header {
+    height: 45vw;
+    min-height: 360px;
+  }
+
+  .header-contents {
+    max-width: 65%;
+    left: 5vw;
+    bottom: 12%;
+    gap: 12px;
+  }
+
+  .header-contents h2 {
+    font-size: 60px;
+  }
+
+  .header-contents p {
+    font-size: 18px;
+  }
+
+  .header-contents button {
+    padding: 8px 20px;
+    font-size: 14px;
+  }
+}
+
+/* ---------------------------
+   MOBILE VIEW
+--------------------------- */
+@media (max-width: 768px) {
+  .header {
+    height: auto;
+    min-height: 320px;
+    border-radius: 16px;
+  }
+
+  .header-contents {
+    position: relative; /* 🔥 key fix */
+    max-width: 100%;
+    left: 0;
+    bottom: 0;
+    padding: 16px;
+    gap: 10px;
+  }
+
+  .header-contents h2 {
+    font-size: 33px;
+    color: white;
+  }
+
+  .header-contents p {
+    font-size: 15px;
+  }
+
+  .header-contents button {
+    padding: 8px 18px;
+    font-size: 13px;
+    margin-top: 5px;
+  }
+}

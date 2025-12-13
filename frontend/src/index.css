@@ -7,11 +7,38 @@
   box-sizing: border-box;
   font-family: Outfit;
 }
+
 body {
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 a {
   text-decoration: none;
   color: inherit;
+}
+
+.app {
+  width: 80%;
+  margin: auto;
+}
+
+/* --------------------
+   MOBILE FIX
+-------------------- */
+@media (max-width: 768px) {
+  .app {
+    width: 100%;
+    margin: 0;
+    padding: 0 12px;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  } 
+  100% {
+    opacity: 1;
+  }
 }
