@@ -10,9 +10,9 @@ I used ChatGPT for generate several design concepts for the Sweet Shop's web log
 I also took help from ChatGPT while working on the header design. It helped me
 think through responsive layouts for mobile, tablet, and desktop screens, and
 suggested color combinations that work well together. Based on these ideas, I
-implemented and fine-tuned the final UI manually.
+implemented the final UI manually.
 
-
+Additionally, I used ChatGPT for guidance while debugging UI issues, improving component structure, and understanding best practices for organizing frontend code. All code was written, tested, and reviewed by me.
 
 Impact on Workflow: 
 Using AI helped me move past initial design blocks and saved time on UI
