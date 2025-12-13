@@ -1,3 +1,6 @@
+/* =========================
+   NAVBAR BASE
+========================= */
 .navbar {
   width: 100%;
   height: 70px;
@@ -9,48 +12,64 @@
   position: sticky;
   top: 0;
   z-index: 100;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
-/* Left Section */
+/* =========================
+   LEFT SECTION
+========================= */
 .nav-left {
   display: flex;
   align-items: center;
-  gap: 12px;
 }
 
 .nav-logo {
   width: 105px;
   height: 85px;
+  object-fit: contain;
+  cursor: pointer;
 }
 
-.nav-menu {
+/* =========================
+   MENU (DESKTOP)
+========================= */
+.navbar-menu {
   display: flex;
-  list-style: none;
+  align-items: center;
   gap: 35px;
+  list-style: none;
 }
 
-.nav-menu li {
+.navbar-menu a {
+  text-decoration: none;
   font-size: 17px;
   font-weight: 500;
+  color: #444;
   cursor: pointer;
   transition: color 0.3s ease;
 }
 
-.nav-menu li:hover {
+.navbar-menu a:hover {
   color: #d12b65;
 }
 
+/* Active link */
 .active {
+  color: #d12b65;
   border-bottom: 3px solid #d12b65;
   padding-bottom: 4px;
 }
 
+/* =========================
+   RIGHT SECTION
+========================= */
 .nav-right {
   display: flex;
   align-items: center;
   gap: 18px;
 }
 
+/* Icons */
 .nav-icon {
   width: 26px;
   height: 26px;
@@ -63,10 +82,12 @@
   color: #d12b65;
 }
 
-/* Sign In Button */
+/* =========================
+   SIGN IN BUTTON
+========================= */
 .sign-in-btn {
   background: #d12b65;
-  color: white;
+  color: #ffffff;
   border: none;
   padding: 8px 18px;
   font-size: 16px;
@@ -80,14 +101,15 @@
   background: #b21d54;
 }
 
-/* Basket Wrapper */
+/* =========================
+   BASKET ICON + DOT
+========================= */
 .basket-wrapper {
   position: relative;
   display: flex;
   align-items: center;
 }
 
-/* Dot Badge */
 .dot {
   position: absolute;
   top: -4px;
@@ -96,20 +118,43 @@
   height: 10px;
   background: #d12b65;
   border-radius: 50%;
-  border: 2px solid #fff;
+  border: 2px solid #ffffff;
 }
 
-/* Hide hamburger on Desktop */
+/* =========================
+   PROFILE (LOGGED IN)
+========================= */
+.navbar-profile {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.profile-text {
+  font-size: 15px;
+  font-weight: 500;
+  color: #444;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.profile-text:hover {
+  color: #d12b65;
+}
+
+/* =========================
+   HAMBURGER MENU
+========================= */
 .mobile-menu-icon {
   display: none;
 }
 
-/* ---------------------------
-   TABLET / MEDIUM SCREEN
---------------------------- */
+/* =========================
+   TABLET (769px - 1199px)
+========================= */
 @media (max-width: 1199px) and (min-width: 769px) {
   .navbar {
-    padding: 0 10px;
+    padding: 0 20px;
   }
 
   .nav-logo {
@@ -117,11 +162,11 @@
     height: 75px;
   }
 
-  .nav-menu {
+  .navbar-menu {
     gap: 22px;
   }
 
-  .nav-menu li {
+  .navbar-menu a {
     font-size: 15px;
   }
 
@@ -140,18 +185,22 @@
   }
 }
 
-
-/* ---------------------------
-   MOBILE view
---------------------------- */
+/* =========================
+   MOBILE (≤ 768px)
+========================= */
 @media (max-width: 768px) {
+
+  .navbar {
+    padding: 0 16px;
+  }
+
   .nav-logo {
     width: 90px;
     height: 70px;
   }
 
   /* Hide desktop menu */
-  .nav-menu {
+  .navbar-menu {
     display: none;
     position: absolute;
     top: 70px;
@@ -159,26 +208,26 @@
     width: 100%;
     flex-direction: column;
     background: #ffffff;
-    padding: 10px 0;
+    padding: 12px 0;
     box-shadow: 0 4px 10px rgba(0,0,0,0.12);
   }
 
-  .nav-menu.open {
+  .navbar-menu.open {
     display: flex;
   }
 
-  .nav-menu li {
-    padding: 5px 0;
+  .navbar-menu a {
+    padding: 12px 0;
     text-align: center;
     font-size: 16px;
   }
 
-  /* Hide Sign In button on mobile */
+  /* Hide Sign In on mobile */
   .sign-in-btn {
     display: none;
   }
 
-  /* show hamburger menu on mobile */
+  /* Show hamburger */
   .mobile-menu-icon {
     display: block;
   }

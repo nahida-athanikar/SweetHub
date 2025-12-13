@@ -123,3 +123,7 @@
     font-size: 14px;
   }
 }
+
+#explore-menu {
+  scroll-margin-top: 85px; /* navbar height + little gap */
+}
