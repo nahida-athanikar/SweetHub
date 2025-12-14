@@ -1,24 +1,39 @@
-import express  from "express"
-import cors from 'cors'
-import { connectDB } from "./config/db.js"
+import express from "express";
+import cors from "cors";
+import dotenv from "dotenv";
 
+import { connectDB } from "./config/db.js";
+
+import userRouter from "./routes/userRoute.js";
+import sweetRouter from "./routes/sweetRoute.js";
+
+
+dotenv.config();
 
 // app config
-const app = express()
+const app = express();
 const port = process.env.PORT || 4000;
 
-
 // middlewares
-app.use(express.json())
-app.use(cors())
+app.use(express.json());
+app.use(cors());
 
 // db connection
-connectDB()
+connectDB();
+
+// API routes
+
+// api endpoints
+app.use("/api/user", userRouter)
+app.use("/api/sweet", sweetRouter)
+app.use("/images",express.static('uploads'))
+
+
 
 app.get("/", (req, res) => {
-    res.send("API Working")
-  });
+  res.send("SweetHub API is running");
+});
 
-app.listen(port, () => console.log(`Server started on http://localhost:${port}`))
-
-//mongodb+srv://nahidathanikar18_db:jWcfISdGImDbtBFV@cluster0.dkigxyy.mongodb.net/?
+app.listen(port, () => {
+  console.log(`Server started on http://localhost:${port}`);
+});
