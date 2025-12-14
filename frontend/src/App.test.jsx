@@ -35,15 +35,15 @@ test("App layout renders Navbar, Home page and Footer", () => {
   // Navbar Home link
   expect(
     screen.getByRole("link", { name: /home/i })
-  ).toBeInTheDocument();
+ ).toBeTruthy();
 
   // Main section
   expect(
     screen.getByText(/order your favourite sweets/i)
-  ).toBeInTheDocument();
+ ).toBeTruthy();
 
   // Footer
   expect(
     screen.getByText(/contact us/i)
-  ).toBeInTheDocument();
+ ).toBeTruthy();
 });
